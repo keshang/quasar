@@ -1,3 +1,0 @@
-[submodule "deploy/quasar-samples"]
-	path = deploy/quasar-samples
-	url = git@github.com:quantego/quasar-samples.git
