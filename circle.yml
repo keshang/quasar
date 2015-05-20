@@ -1,0 +1,15 @@
+machine:
+  services:
+    - docker
+
+dependencies:
+  override:
+    - docker info
+    - docker build -t quasar .
+
+test:
+  override:
+    - docker run quasar /bin/sh -c "/usr/local/bin/ipython nbconvert --to=html --ExecutePreprocessor.enabled=True samples/SimpleInventory.ipynb"
+    - docker run quasar /bin/sh -c "/usr/local/bin/ipython nbconvert --to=html --ExecutePreprocessor.enabled=True samples/AggregatePlanning.ipynb"
+    - docker run quasar /bin/sh -c "/usr/local/bin/ipython nbconvert --to=html --ExecutePreprocessor.enabled=True samples/SimplyHydroExample.ipynb"
+
