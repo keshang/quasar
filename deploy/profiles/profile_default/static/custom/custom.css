@@ -1,0 +1,50 @@
+/*
+Placeholder for custom user CSS
+
+mainly to be overridden in profile/static/custom/custom.css
+
+This will always be an empty file in IPython
+*/
+
+table.dataframe {
+    border-collapse:collapse;
+    padding:0px;
+    border: 0px solid #FFF;
+}
+
+.dataframe thead th {
+    color:#FFFFFF;
+    background:#051F43;
+    padding:5px;
+    text-align: left;
+    vertical-align:top;
+    border: 0px solid #FFF;
+}
+
+.dataframe tr th {
+ border: 0px solid #FFF;
+}
+
+.dataframe tr {
+    color:#000000;
+    font-weight:normal;
+    border-color: transparent;
+    border: 0px solid #FFF;
+}
+ 
+.dataframe tbody tr:nth-child(even) td {
+  background: #D6D6D6;
+}
+
+.dataframe tbody tr:nth-child(even) th {
+  background: #D6D6D6;
+} 
+
+
+.dataframe td {
+    background:#fff;
+    padding:5px;
+    text-align:left;
+    vertical-align:top;
+     border: 0px solid #FFF;
+}

@@ -1,0 +1,11 @@
+# Quantego QUASAR
+Copyright 20140-2015 Manuel Riel, Nils Löhndorf. All rights reserved.
+Quantego QUASAR is made possible by a number of commercial and open source projects:
+
+## or-tools
+Homepage: https://code.google.com/p/or-tools/
+License: http://www.apache.org/licenses/LICENSE-2.0
+
+## Sulum optimization
+Homepage: http://sulumoptimization.com/
+License: Commercial
