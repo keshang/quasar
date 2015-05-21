@@ -12,7 +12,7 @@ RUN apt-get update && apt-get install -y net-tools inetutils-ping curl \
 RUN pip install -U setuptools pip distribute configobj numpy
 
 COPY deploy/pyquasar-0.8.tar.gz /tmp/pyquasar-0.8.tar.gz
-RUN pip install /tmp/pyquasar-0.8.tar.gz
+RUN pip install -vvv /tmp/pyquasar-0.8.tar.gz
 
 RUN adduser --home /home/swuser --shell /sbin/nologin --disabled-password swuser && \
     chown -R swuser:swuser /home/swuser
