@@ -5,7 +5,7 @@ machine:
 dependencies:
   override:
     - docker info
-    - docker build -t quasar .
+    - docker build -t quasar .:
         timeout: 1800
 
 test:
