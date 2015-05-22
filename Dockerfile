@@ -22,6 +22,7 @@ RUN mkdir /usr/lib/jni
 COPY deploy/libjniortools.so /usr/lib/jni/libjniortools.so
 COPY deploy/profiles/profile_default /home/swuser/.ipython/profile_default
 COPY deploy/quasar-latest.jar /usr/lib/quasar-latest.jar
+COPY deploy/99-update.py /home/swuser/.ipython/profile_default/startup/99-update.py
 RUN git clone https://github.com/quantego/quasar-samples.git /home/swuser/notebooks/samples
 RUN chown -R swuser:swuser /home/swuser && chmod -R 770 /home/swuser
 
