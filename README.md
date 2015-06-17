@@ -1,6 +1,15 @@
 # Quantego QUASAR
 
-QUASAR is an analytics software that empowers decision-makers to optimize models with random parameters. The easiest way to get started using our powerful stochastic optimizer. Model, optimize and analyze your decisions directly in iPython. Includes many examples and a full QUASAR version, limited to 50 nodes and 24 stages.
+[QUASAR](http://static.quantego.com/QUASAR.pdf) is an analytics software that empowers decision-makers to optimize models with random parameters. The easiest way to get started using our powerful stochastic optimizer. Model, optimize and analyze your decisions directly in iPython. Includes many examples and a full QUASAR version, limited to 50 nodes and 24 stages.
+
+## Examples
+
+Easily model and optimize complex decision problems involving uncertainty in iPython:
+
+- [Inventory Managment](https://github.com/quantego/quasar-samples/blob/master/AggregatePlanning.ipynb)
+- [Hydro dam storage](https://github.com/quantego/quasar-samples/blob/master/SimplyHydroExample.ipynb)
+- [Household-size battery store](https://github.com/quantego/quasar-samples/blob/master/BatteryStorage.ipynb)
+
 
 ## Get started
 
