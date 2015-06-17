@@ -4,8 +4,8 @@ QUASAR is an analytics software that empowers decision-makers to optimize models
 
 ## Get started
 
-- get docker from here
-- run `docker run -p 8888:8888 quantego/quasar` or search [Kitematic](http://www.kitematic.com) for `quantego/quasar`
+- Install [Docker](https://docs.docker.com/installation/#installation) or [Kitematic](http://www.kitematic.com) on Mac OSX.
+- run `docker run -p 8888:8888 quantego/quasar` or search Kitematic for `quantego/quasar`
 - open [http://localhost:8888](http://localhost:8888)
 
 ## Documentation
