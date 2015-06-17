@@ -4,6 +4,8 @@
 
 ## Examples
 
+![Hydro storage](http://static.quantego.com/example-hydro.png)
+
 Easily model and optimize complex decision problems involving uncertainty in iPython:
 
 - [Inventory Managment](https://github.com/quantego/quasar-samples/blob/master/AggregatePlanning.ipynb)
