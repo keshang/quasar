@@ -1,6 +1,6 @@
-# Quantego Quasar
+# Quantego QUASAR
 
-The easiest way to get started using our powerful stochastic optimizer. Model, optimize and analyze your decisions directly in iPython. Includes many examples and a full QUASAR version, limited to 20 variables and 100 stages.
+QUASAR is an analytics software that empowers decision-makers to optimize models with random parameters. The easiest way to get started using our powerful stochastic optimizer. Model, optimize and analyze your decisions directly in iPython. Includes many examples and a full QUASAR version, limited to 50 nodes and 24 stages.
 
 ## Get started
 
