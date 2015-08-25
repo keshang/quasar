@@ -29,7 +29,6 @@ RUN chown -R swuser:swuser /home/swuser && chmod -R 770 /home/swuser
 USER swuser
 EXPOSE 8888
 ENV HOME /home/swuser
-ENV SULUM_LICENSE LICENSE sulum slmlp 4.3 30-jun-2015 uncounted hostid=ANY _ck=c51efc8e94 sig="60PG453MNM3XG74U4RVJ2X1W5F32PWNPBSA5EXR22M09V6F1PVQBYHEGN05T97EDC1042ACHHH4G"
 ENV QUASAR_JAR /usr/lib/quasar-latest.jar
 WORKDIR /home/swuser/notebooks
 CMD /usr/local/bin/python2 -m IPython notebook 
