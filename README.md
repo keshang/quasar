@@ -10,6 +10,10 @@ Model, optimize, and analyze your decisions directly in iPython. Our trial inclu
 - Run `docker run -p 8888:8888 quantego/quasar` or search Kitematic for `quantego/quasar`
 - Open [http://localhost:8888](http://localhost:8888)
 
+## System Requirements
+- 4 GB of memory or greater
+- 64-bit Windows, Linux, or Mac OS
+
 ## Documentation
 
 The best way to learn QUASAR is to read and run our example notebooks.
