@@ -14,7 +14,7 @@ RUN pip install -U setuptools pip distribute configobj numpy
 COPY deploy/pyquasar-0.8.tar.gz /tmp/pyquasar-0.8.tar.gz
 RUN pip install -vvv /tmp/pyquasar-0.8.tar.gz
 
-RUN adduser --home /home/swuser --shell /sbin/nologin --disabled-password swuser && \
+RUN adduser --home /home/swuser --uid 431 --shell /sbin/nologin --disabled-password swuser && \
     chown -R swuser:swuser /home/swuser
 
 # Copy over some native libs and a default ipython profile.
