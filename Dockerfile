@@ -1,13 +1,13 @@
-FROM python:2
+FROM ubuntu:14.04
 MAINTAINER riel@quantego.com
 
 ENV DEBIAN_FRONTEND noninteractive
 
 RUN apt-get update && apt-get install -y net-tools inetutils-ping curl \
     git telnet socat tree unzip sudo software-properties-common python-mysqldb \
-    pkg-config apt-utils wget build-essential python-dev python python-pip wget \
-    liblapack-dev libatlas-dev gfortran libfreetype6 libfreetype6-dev libpng12-dev \
-    python-lxml libyaml-dev g++ libffi-dev libzmq-dev libzmq1 \
+    pkg-config apt-utils wget build-essential python-dev python python-virtualenv \
+    python-pip wget liblapack-dev libatlas-dev gfortran libfreetype6 libfreetype6-dev 
+    libpng12-dev python-lxml libyaml-dev g++ libffi-dev libzmq-dev libzmq1 \
     glpk-utils coinor-cbc coinor-clp
 RUN add-apt-repository -y ppa:openjdk-r/ppa && \
     apt-get update && apt-get install -y openjdk-8-jdk
