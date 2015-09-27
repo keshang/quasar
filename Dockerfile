@@ -9,8 +9,9 @@ RUN apt-get update && apt-get install -y net-tools inetutils-ping curl \
     liblapack-dev libatlas-dev gfortran libfreetype6 libfreetype6-dev libpng12-dev \
     python-lxml libyaml-dev g++ libffi-dev libzmq-dev libzmq1 \
     glpk-utils coinor-cbc coinor-clp
-RUN add-apt-repository -y ppa:openjdk-r/ppa
-RUN pip install -U setuptools pip distribute configobj numpy openjdk-8-jdk
+RUN add-apt-repository -y ppa:openjdk-r/ppa && \
+    apt-get update && apt-get install -y openjdk-8-jdk
+RUN pip install -U setuptools pip distribute configobj numpy
 
 COPY deploy/pyquasar-0.8.tar.gz /tmp/pyquasar-0.8.tar.gz
 RUN pip install -vvv /tmp/pyquasar-0.8.tar.gz
