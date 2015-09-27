@@ -6,7 +6,7 @@ ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update && apt-get install -y net-tools inetutils-ping curl \
     git telnet socat tree unzip sudo software-properties-common python-mysqldb \
     pkg-config apt-utils wget build-essential python-dev python python-virtualenv \
-    python-pip wget liblapack-dev libatlas-dev gfortran libfreetype6 libfreetype6-dev 
+    python-pip wget liblapack-dev libatlas-dev gfortran libfreetype6 libfreetype6-dev \
     libpng12-dev python-lxml libyaml-dev g++ libffi-dev libzmq-dev libzmq1 \
     glpk-utils coinor-cbc coinor-clp
 RUN add-apt-repository -y ppa:openjdk-r/ppa && \
