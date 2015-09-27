@@ -33,4 +33,4 @@ EXPOSE 8888
 ENV HOME /home/swuser
 ENV QUASAR_JAR /usr/lib/quasar-latest.jar
 WORKDIR /home/swuser/notebooks
-CMD /usr/local/bin/python2 -m IPython notebook 
+CMD /usr/bin/python -m IPython notebook 
