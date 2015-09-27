@@ -3,7 +3,7 @@ MAINTAINER riel@quantego.com
 
 ENV DEBIAN_FRONTEND noninteractive
 
-RUN sudo add-apt-repository -y ppa:openjdk-r/ppa
+RUN add-apt-repository -y ppa:openjdk-r/ppa
 RUN apt-get update && apt-get install -y net-tools inetutils-ping curl \
     git telnet socat tree unzip sudo software-properties-common python-mysqldb \
     pkg-config apt-utils wget build-essential python-dev python python-pip wget \
