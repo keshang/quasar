@@ -20,8 +20,6 @@ RUN adduser --home /home/swuser --uid 431 --shell /sbin/nologin --disabled-passw
     chown -R swuser:swuser /home/swuser
 
 # Copy over some native libs and a default ipython profile.
-RUN mkdir /usr/lib/jni
-COPY deploy/libjniortools.so /usr/lib/jni/libjniortools.so
 COPY deploy/profiles/profile_default /home/swuser/.ipython/profile_default
 COPY deploy/quasar-latest.jar /usr/lib/quasar-latest.jar
 COPY deploy/00-update.py /home/swuser/.ipython/profile_default/startup/00-update.py
