@@ -12,7 +12,7 @@ import sklearn
 import matplotlib.pyplot as plt
 import matplotlib
 import statsmodels.api as sm
-import sqlobject
+# import sqlobject
 import patsy
 import math
 
