@@ -4,11 +4,14 @@
 
 Model, optimize, and analyze your decisions directly in iPython. Our trial includes many examples as well as a fully functional version of QUASAR. Only the problem size is limited to lattices with a maximum of 50 nodes per stage and 24 stages.
 
-## Getting started
+## Getting started with Docker
 
 - Install [Docker](https://docs.docker.com/installation/#installation) or [Kitematic](http://www.kitematic.com) on Mac OSX.
 - Run `docker run -p 8888:8888 quantego/quasar` or search Kitematic for `quantego/quasar`
 - Open [http://localhost:8888](http://localhost:8888)
+
+## Getting started without Docker
+If you already have your Python environment set up and know how to manage packages and run iPython/Jupyter, you can [install QUASAR directly](INSTALL.md).
 
 ## System Requirements
 - 4 GB of memory or greater
