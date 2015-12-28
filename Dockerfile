@@ -21,7 +21,7 @@ RUN adduser --home /home/swuser --uid 431 --shell /sbin/nologin --disabled-passw
 
 # Copy over some native libs and a default ipython profile.
 COPY deploy/profiles/profile_default /home/swuser/.ipython/profile_default
-COPY deploy/quasar-latest.jar /usr/lib/quasar-latest.jar
+COPY deploy/quasar-latest-trial.jar /usr/lib/quasar-latest-trial.jar
 COPY deploy/00-update.py /home/swuser/.ipython/profile_default/startup/00-update.py
 RUN git clone https://github.com/quantego/quasar-samples.git /home/swuser/notebooks/samples
 RUN chown -R swuser:swuser /home/swuser && chmod -R 770 /home/swuser
@@ -29,6 +29,6 @@ RUN chown -R swuser:swuser /home/swuser && chmod -R 770 /home/swuser
 USER swuser
 EXPOSE 8888
 ENV HOME /home/swuser
-ENV QUASAR_JAR /usr/lib/quasar-latest.jar
+ENV QUASAR_JAR /usr/lib/quasar-latest-trial.jar
 WORKDIR /home/swuser/notebooks
 CMD /usr/bin/python -m IPython notebook 
