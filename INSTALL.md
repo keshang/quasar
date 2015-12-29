@@ -33,7 +33,7 @@ Then install Java 8 (open source version). Sun/Oracle Java should also work.
 ```
 virtualenv quasasr-env
 source quasasr-env/bin/activate
-pip install -U setuptools pip distribute configobj numpy
+pip install -U setuptools pip distribute configobj numpy scipy
 ```
 
 ## Install Quasar Python libs
