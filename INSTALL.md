@@ -37,7 +37,7 @@ pip install -U setuptools pip distribute configobj numpy
 ```
 
 ## Install Quasar Python libs
-`http://static.quantego.com/releases/pyquasar-dev.tar.gz`
+`pip install -U http://static.quantego.com/releases/pyquasar-dev.tar.gz`
 
 ## Download Java bindings and set environment variable
 ```
