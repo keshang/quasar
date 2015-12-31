@@ -23,9 +23,3 @@ deployment:
     commands:
       - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
       - docker push $DOCKER_REPO
-
-# deployment:
-#   public_dev:
-#     branch: master
-#     commands:
-#       - curl -H "Content-Type:application/json" --data '{"docker_tag":"latest"}' -X POST https://registry.hub.docker.com/u/quantego/quasar/trigger/c1864219-515e-4f58-9344-663ba39de31d/
