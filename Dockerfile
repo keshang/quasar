@@ -10,8 +10,8 @@ RUN apt-get update && apt-get -q install -y net-tools inetutils-ping curl \
     libpng12-dev python-lxml libyaml-dev g++ libffi-dev libzmq-dev libzmq1 \
     glpk-utils coinor-cbc coinor-clp
 RUN add-apt-repository -y ppa:openjdk-r/ppa && \
-    apt-get update && apt-get -q install -y --no-install-recommends openjdk-8-jdk
-RUN pip install -U -q setuptools pip distribute configobj numpy scipy
+    apt-get update && apt-get install -y --no-install-recommends openjdk-8-jdk
+RUN pip install -U setuptools pip distribute configobj numpy scipy nose
 
 RUN pip install -U -q http://static.quantego.com/releases/pyquasar-dev.tar.gz
 

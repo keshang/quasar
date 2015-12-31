@@ -1,4 +1,5 @@
 # QUASAR Stochastic Optimizer
+[![Circle CI](https://circleci.com/gh/quantego/quasar.svg?style=svg)](https://circleci.com/gh/quantego/quasar)
 
 [QUASAR](http://www.quantego.com) is a state-of-the-art analytics software that empowers decision-makers to optimize models with random parameters.
 
