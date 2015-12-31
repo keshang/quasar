@@ -11,7 +11,7 @@ RUN apt-get update && apt-get install -y net-tools inetutils-ping curl \
     glpk-utils coinor-cbc coinor-clp
 RUN add-apt-repository -y ppa:openjdk-r/ppa && \
     apt-get update && apt-get install -y --no-install-recommends openjdk-8-jdk
-RUN pip install -U setuptools pip distribute configobj numpy scipy
+RUN pip install -U setuptools pip distribute configobj numpy scipy nose
 
 RUN pip install -U http://static.quantego.com/releases/pyquasar-dev.tar.gz
 
