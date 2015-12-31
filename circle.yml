@@ -5,7 +5,7 @@ machine:
 dependencies:
   override:
     - docker info
-    - docker build -t quasar .:
+    - docker build -t $DOCKER_REPO .:
         timeout: 1800
 
 test:
@@ -14,10 +14,18 @@ test:
         timeout: 7200
     - docker run quasar /bin/sh -c "/usr/local/bin/ipython nbconvert --to=html --ExecutePreprocessor.enabled=True --ExecutePreprocessor.timeout=3600 samples/gas/*.ipynb":
         timeout: 7200
-    - docker run quasar /bin/sh -c "/usr/bin/python -c 'import pyquasar.tests; pyquasar.tests.run()'"
+    - docker run quasar /bin/sh -c "nosetests /usr/local/lib/python2.7/dist-packages/pyquasar"
+
 
 deployment:
-  public_dev:
+  hub:
     branch: master
     commands:
-      - curl -H "Content-Type:application/json" --data '{"docker_tag":"latest"}' -X POST https://registry.hub.docker.com/u/quantego/quasar/trigger/c1864219-515e-4f58-9344-663ba39de31d/
+      - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
+      - docker push $DOCKER_REPO
+
+# deployment:
+#   public_dev:
+#     branch: master
+#     commands:
+#       - curl -H "Content-Type:application/json" --data '{"docker_tag":"latest"}' -X POST https://registry.hub.docker.com/u/quantego/quasar/trigger/c1864219-515e-4f58-9344-663ba39de31d/
