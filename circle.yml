@@ -12,8 +12,6 @@ test:
   override:
     - docker run $DOCKER_REPO /bin/sh -c "/usr/local/bin/jupyter nbconvert --to=html --ExecutePreprocessor.enabled=True --ExecutePreprocessor.timeout=3600 samples/*.ipynb":
         timeout: 7200
-    - docker run $DOCKER_REPO /bin/sh -c "/usr/local/bin/jupyter nbconvert --to=html --ExecutePreprocessor.enabled=True --ExecutePreprocessor.timeout=3600 samples/gas/*.ipynb":
-        timeout: 7200
     - docker run $DOCKER_REPO /bin/sh -c "/usr/local/bin/nosetests /usr/local/lib/python2.7/dist-packages/pyquasar"
 
 deployment:
