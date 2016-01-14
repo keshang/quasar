@@ -8,7 +8,7 @@ RUN apt-get update && apt-get -q install -y net-tools inetutils-ping curl \
     pkg-config apt-utils wget build-essential python-dev python python-virtualenv \
     python-pip wget liblapack-dev libatlas-dev gfortran libfreetype6 libfreetype6-dev \
     libpng12-dev python-lxml libyaml-dev g++ libffi-dev libzmq-dev libzmq1 \
-    glpk-utils coinor-cbc coinor-clp
+    glpk-utils coinor-cbc coinor-clp libpq-dev
 RUN add-apt-repository -y ppa:openjdk-r/ppa && \
     apt-get update && apt-get install -y --no-install-recommends openjdk-8-jdk
 RUN pip install -U setuptools pip distribute configobj numpy scipy nose
