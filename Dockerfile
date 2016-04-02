@@ -1,4 +1,4 @@
-FROM ubuntu:14.04
+FROM debian
 MAINTAINER riel@quantego.com
 
 ENV DEBIAN_FRONTEND noninteractive
@@ -7,13 +7,15 @@ RUN apt-get update && apt-get -q install -y net-tools inetutils-ping curl \
     git telnet socat tree unzip sudo software-properties-common python-mysqldb \
     pkg-config apt-utils wget build-essential python-dev python python-virtualenv \
     python-pip wget liblapack-dev libatlas-dev gfortran libfreetype6 libfreetype6-dev \
-    libpng12-dev python-lxml libyaml-dev g++ libffi-dev libzmq-dev libzmq1 \
+    libpng12-dev python-lxml libyaml-dev g++ libffi-dev libzmq-dev libzmq1 libpq-dev \
     glpk-utils coinor-cbc coinor-clp
-RUN add-apt-repository -y ppa:openjdk-r/ppa && \
-    apt-get update && apt-get install -y --no-install-recommends openjdk-8-jdk
-RUN pip install -U setuptools pip distribute configobj numpy scipy nose
 
-RUN pip install -U http://static.quantego.com/releases/pyquasar-dev.tar.gz
+RUN echo deb http://ftp.debian.org/debian jessie-backports main >> /etc/apt/sources.list && \
+    apt-get -qq update && apt-get -qq install -y --no-install-recommends openjdk-8-jdk
+
+RUN pip install -U setuptools pip distribute configobj numpy scipy nose jupyter
+
+RUN pip install -U http://static.quantego.com/releases/pyquasar-latest.tar.gz
 
 RUN adduser --home /home/swuser --uid 431 --shell /sbin/nologin --disabled-password swuser && \
     chown -R swuser:swuser /home/swuser
