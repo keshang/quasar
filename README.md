@@ -18,6 +18,11 @@ If you already have your Python environment set up and know how to manage packag
 - 4 GB of memory or greater
 - 64-bit Windows, Linux, or Mac OS
 
+## Changelog
+- **April 2016**: use jupyter instead of ipython, use Debian instead of Ubuntu.
+- **Jan 2016**: add and test sample notebooks
+- **Nov 2015**: initial publication
+
 ## Documentation
 
 The best way to learn QUASAR is to read and run our example notebooks.
