@@ -15,7 +15,7 @@ RUN echo "deb http://ftp.debian.org/debian jessie-backports main" >> /etc/apt/so
 
 RUN pip install -U setuptools pip distribute configobj numpy scipy nose jupyter
 
-RUN pip install -U http://static.quantego.com/releases/pyquasar-latest.tar.gz
+RUN pip install -U http://static.quantego.com/releases/pyquasar-prod.tar.gz
 
 RUN adduser --home /home/swuser --uid 431 --shell /sbin/nologin --disabled-password swuser && \
     chown -R swuser:swuser /home/swuser
@@ -23,8 +23,8 @@ RUN adduser --home /home/swuser --uid 431 --shell /sbin/nologin --disabled-passw
 # Copy over some native libs and a default ipython profile.
 COPY dotfiles/ipython /home/swuser/.ipython
 COPY dotfiles/jupyter /home/swuser/.jupyter
-ADD http://static.quantego.com/releases/quasar-latest-trial.jar /usr/lib/quasar-latest-trial.jar
-RUN chmod 755 /usr/lib/quasar-latest-trial.jar
+# ADD http://static.quantego.com/releases/quasar-latest-trial.jar /usr/lib/quasar-latest-trial.jar
+# RUN chmod 755 /usr/lib/quasar-latest-trial.jar
 RUN git clone https://github.com/quantego/quasar-samples.git /home/swuser/notebooks/samples
 RUN chown -R swuser:swuser /home/swuser && chmod -R 770 /home/swuser
 
@@ -32,6 +32,6 @@ RUN pip install -U jupyter
 USER swuser
 EXPOSE 8888
 ENV HOME /home/swuser
-ENV QUASAR_JAR /usr/lib/quasar-latest-trial.jar
+# ENV QUASAR_JAR /usr/lib/quasar-latest-trial.jar
 WORKDIR /home/swuser/notebooks
 CMD /usr/local/bin/jupyter notebook
